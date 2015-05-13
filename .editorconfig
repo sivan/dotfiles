@@ -2,21 +2,21 @@
 root = true
 
 [*]
-indent_style = space
-indent_size = 4
-end_of_line = lf
 charset = utf-8
-trim_trailing_whitespace = true
+indent_size = 4
+indent_style = space
+end_of_line = lf
 insert_final_newline = true
+trim_trailing_whitespace = true
+
+[{htmlhintrc,jscsrc,jshintrc,*.htmlhintrc,*.jscsrc,*.jshintrc}]
+indent_size = 2
 
 [*.less]
 indent_style = tab
 
 [*.scss]
 indent_style = tab
-
-[*.coffee]
-indent_size = 4
 
 [*.json]
 indent_size = 2
