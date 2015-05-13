@@ -52,6 +52,7 @@ export PATH=/usr/local/bin:$PATH
 export PATH=/usr/sbin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
+export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules:$PATH
 
 ### Open files ###
 alias -s html=subl
