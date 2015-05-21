@@ -10,6 +10,7 @@ ZSH_THEME="jreese"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="subl ~/.oh-my-zsh"
+alias zshrc="subl ~/.zshrc"
 alias vim="mvim"
 
 # Set to this to use case-sensitive completion
@@ -28,7 +29,7 @@ alias vim="mvim"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment following line if you want to disable command autocorrection
-# DISABLE_CORRECTION="true"
+DISABLE_CORRECTION="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 # COMPLETION_WAITING_DOTS="true"
@@ -46,8 +47,6 @@ plugins=(git brew npm osx sudo autojump zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-setopt nocorrectall
-unsetopt correct
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/sbin:$PATH
 export PATH=/usr/local/sbin:$PATH
@@ -64,6 +63,9 @@ alias -s gz='tar -xzvf'
 alias -s tgz='tar -xzvf'
 alias -s zip='unzip'
 alias -s bz2='tar -xjvf'
+
+### Use boot2docker for docker in MacOS
+alias di='eval "$(boot2docker shellinit)"'
 
 ### Autojump ###
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
