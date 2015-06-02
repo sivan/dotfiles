@@ -1,7 +1,6 @@
 # Editor generate files
 .idea
 .settings
-nbproject
 *.sublime-project
 *.sublime-workspace
 
