@@ -5,7 +5,6 @@
   /*
    * 以下配置用于覆盖 Airbnb JavaScript Style Guide Preset
    */
-  "disallowMultipleVarDecl": null,
   "disallowMultipleVarDecl": "exceptUndefined",
   "requireCamelCaseOrUpperCaseIdentifiers": "ignoreProperties",
 
@@ -17,10 +16,5 @@
       "inProperties"
     ]
   },
-
-  // @Todo：是否限制单行长度
-  // "maximumLineLength": 80,
-
-  // 习惯使用 4 空格缩进
-  "validateIndentation": 4
+  "maximumLineLength": 120
 }

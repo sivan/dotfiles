@@ -9,7 +9,7 @@ end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-[{htmlhintrc,jscsrc,jshintrc,*.htmlhintrc,*.jscsrc,*.jshintrc}]
+[*.{htmlhintrc,jscsrc,jshintrc}]
 indent_size = 2
 
 [*.less]
@@ -17,6 +17,9 @@ indent_style = tab
 
 [*.scss]
 indent_style = tab
+
+[*.js]
+indent_size = 2
 
 [*.json]
 indent_size = 2
