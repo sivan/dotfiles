@@ -65,7 +65,12 @@ alias -s zip='unzip'
 alias -s bz2='tar -xjvf'
 
 ### Use boot2docker for docker in MacOS
-alias di='eval "$(boot2docker shellinit)"'
+alias b2d='eval "$(boot2docker shellinit)"'
+
+### Use vi mode 
+bindkey -v
+bindkey -M viins 'jj' vi-cmd-mode
+bindkey '^R' history-incremental-search-backward
 
 ### Autojump ###
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
