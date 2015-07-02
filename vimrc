@@ -4,7 +4,12 @@ autocmd! InsertEnter * set noimdisable|set iminsert=0
 
 "重新映射 Esc 和 leader 键
 inoremap jj <ESC>
-let mapleader = ","
+let mapleader = ";"
+
+" 开启文件类型侦测
+filetype on
+" 根据侦测到的不同类型加载对应的插件
+filetype plugin on
 
 "显示行号
 set number
