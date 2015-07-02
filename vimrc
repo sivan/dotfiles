@@ -20,7 +20,6 @@ set nocompatible
 " vim 自身命令行模式智能补全
 set wildmenu
 
-
 "显示行号
 set number
 
