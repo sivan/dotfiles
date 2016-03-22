@@ -1,13 +1,11 @@
 # Editor generate files
 .idea
+.sublime-*
 .settings
-*.sublime-project
-*.sublime-workspace
 
 # Dev dependencies and cache files
 .sass-cache
 node_modules
-*.log
 
 # Folder view configuration files
 .DS_Store
