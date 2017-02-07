@@ -1,21 +1,16 @@
 {
-  "extends": ["airbnb/legacy"],
+  "extends": [
+    "airbnb-base"
+  ],
   "env": {
+    "node": true,
     "browser": true,
-    "jquery": true
+    "jquery": true,
+    "commonjs": true
   },
   "rules": {
-    "strict": 0,
-    "comma-dangle": 0,
-    "func-names": 0,
-    "id-length": 0,
-    "linebreak-style": [2, "unix"],
     "max-len": [2, 120, 2],
     "no-console": 0,
-    "no-script-url": 1,
-    "no-unused-expressions": [2, { "allowShortCircuit": true }],
-    "one-var": [2, { "initialized": "never" }],
-    "spaced-comment": 0,
-    "vars-on-top": 1
+    "global-require": 0
   }
 }

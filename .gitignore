@@ -1,17 +1,19 @@
 # Editor generate files
-.idea
+.idea/
 .sublime-*
-.settings
+.settings/
 
 # Dev dependencies and cache files
-.sass-cache
-node_modules
+.sass-cache/
+node_modules/
+npm-debug.log
 
 # Folder view configuration files
 .DS_Store
 Desktop.ini
 
 # Thumbnail cache files
+*~
 ._*
 Thumbs.db
 

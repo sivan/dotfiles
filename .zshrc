@@ -12,6 +12,10 @@ ZSH_THEME="jreese"
 alias ohmyzsh="subl ~/.oh-my-zsh"
 alias zshrc="subl ~/.zshrc"
 alias vim="mvim"
+alias ="archey -c"
+
+export LANG='UTF-8'
+export LC_ALL='en_US.UTF-8'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -57,7 +61,6 @@ export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules:$PATH
 alias -s html=subl
 alias -s js=subl
 alias -s css=subl
-alias -s less=subl
 alias -s scss=subl
 alias -s gz='tar -xzvf'
 alias -s tgz='tar -xzvf'
@@ -67,10 +70,17 @@ alias -s bz2='tar -xjvf'
 ### Use boot2docker for docker in MacOS
 alias b2d='eval "$(boot2docker shellinit)"'
 
-### Use vi mode 
-bindkey -v
-bindkey -M viins 'jj' vi-cmd-mode
-bindkey '^R' history-incremental-search-backward
+### Use vi mode
+# bindkey -v
+# bindkey -M viins 'jj' vi-cmd-mode
+# bindkey '^R' history-incremental-search-backward
 
 ### Autojump ###
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
+
+### Use NVM
+export NVM_DIR="$HOME/.nvm"
+  . "$(brew --prefix nvm)/nvm.sh"
+
+### Use yarn
+export PATH="$HOME/.yarn/bin:$PATH"
