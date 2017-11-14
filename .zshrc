@@ -57,16 +57,6 @@ export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
 export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules:$PATH
 
-### Open files ###
-alias -s html=subl
-alias -s js=subl
-alias -s css=subl
-alias -s scss=subl
-alias -s gz='tar -xzvf'
-alias -s tgz='tar -xzvf'
-alias -s zip='unzip'
-alias -s bz2='tar -xjvf'
-
 ### Use boot2docker for docker in MacOS
 alias b2d='eval "$(boot2docker shellinit)"'
 
