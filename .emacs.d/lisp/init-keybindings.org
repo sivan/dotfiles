@@ -1,0 +1,13 @@
+#+STARTUP: overview
+
+* 按键绑定
+
+** 配置按键
+
+#+BEGIN_SRC emacs-lisp
+(global-set-key (kbd "<f2>") 'open-init-file)
+(global-set-key (kbd "<f3>") 'load-config-file)
+(global-set-key (kbd "<f5>") 'set-window-small)
+(global-set-key (kbd "<f6>") 'set-window-medium)
+(global-set-key (kbd "<f7>") 'set-window-large)
+#+END_SRC

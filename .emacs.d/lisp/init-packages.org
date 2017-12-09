@@ -1,0 +1,33 @@
+#+STARTUP: overview
+
+* 插件配置
+
+** Markdown Mode
+
+#+BEGIN_SRC emacs-lisp
+;; Markdown Mode
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(cursor-in-non-selected-windows (quote box))
+ '(cursor-type (quote (bar . 3)))
+ '(markdown-command "multimarkdown")
+ '(package-selected-packages (quote (markdown-mode try company))))
+
+(use-package markdown-mode
+  :ensure t
+  :commands (markdown-mode gfm-mode)
+  :mode (("README\\.md\\'" . gfm-mode)
+         ("\\.md\\'" . markdown-mode)
+         ("\\.markdown\\'" . markdown-mode))
+  :init (setq markdown-command "multimarkdown"))
+#+END_SRC
+
+** Company
+
+#+BEGIN_SRC emacs-lisp
+;; 开启全局 Company 补全
+(global-company-mode 1)
+#+END_SRC

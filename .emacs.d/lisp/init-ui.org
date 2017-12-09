@@ -1,0 +1,68 @@
+#+STARTUP: overview
+
+* 界面配置
+
+** 窗口
+
+#+BEGIN_SRC emacs-lisp
+;; 定义小号窗口和位置
+(defun set-window-small()
+  (interactive)
+  (set-frame-position (selected-frame) 60 240)
+  (set-frame-width (selected-frame) 120)
+  (set-frame-height (selected-frame) 54)
+)
+
+;; 定义中号窗口和位置
+(defun set-window-medium()
+  (interactive)
+  (set-frame-position (selected-frame) 60 240)
+  (set-frame-width (selected-frame) 150)
+  (set-frame-height (selected-frame) 54)
+)
+
+;; 定义大号窗口和位置
+(defun set-window-large()
+  (interactive)
+  (set-frame-position (selected-frame) 40 60)
+  (set-frame-width (selected-frame) 200)
+  (set-frame-height (selected-frame) 66)
+)
+
+;; 设置启动时窗口位置及大小
+(set-window-medium)
+
+;; 开启自动全屏
+;;(setq initial-frame-alist (quote ((fullscreen . maximized))))
+
+;; 关闭工具栏
+(if window-system (tool-bar-mode -1))
+;; 隐藏滚动条
+;; (if window-system (scroll-bar-mode -1))
+
+;; 关闭启动帮助画面
+(setq inhibit-splash-screen 1)
+
+;; 主题
+;;(load-theme 'monokai 1)
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+(load-theme 'dracula t)
+#+END_SRC
+
+** 编辑器
+
+#+BEGIN_SRC emacs-lisp
+;; 更改显示字体大小 16pt
+;; http://stackoverflow.com/questions/294664/how-to-set-the-font-size-in-emacs
+(set-face-attribute 'default nil :height 160)
+
+;; 更改光标的样式
+(setq-default cursor-type '(bar . 3))
+(setq-default cursor-in-non-selected-windows 'box)
+
+;; 高亮当前行
+(global-hl-line-mode 1)
+
+;; 显示行号
+(global-linum-mode 1)
+#+END_SRC

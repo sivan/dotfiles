@@ -41,42 +41,7 @@
         (package-install pkg))))
 
 
-(org-babel-load-file (expand-file-name "~/.emacs.d/config/config.org"))
-
-
-
 ;; Find Executable Path on OS X
-(when (memq window-system '(mac ns))
-  (exec-path-from-shell-initialize))
-
-
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(cursor-in-non-selected-windows (quote box))
- '(cursor-type (quote (bar . 3)))
- '(markdown-command "multimarkdown")
- '(package-selected-packages (quote (markdown-mode try company))))
-
-;; == 编辑器 ==
-
-;; 主题
-;;(load-theme 'monokai 1)
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-(load-theme 'dracula t)
-
-
-
-
-;; 开启全局 Company 补全
-(global-company-mode 1)
-
-;; == 代码 ==
-
-;; 加载 node 解释器
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
 
@@ -86,11 +51,10 @@
        '(("\\.js\\'" . js2-mode))
        auto-mode-alist))
 
-;; Markdown Mode
-(use-package markdown-mode
-  :ensure t
-  :commands (markdown-mode gfm-mode)
-  :mode (("README\\.md\\'" . gfm-mode)
-         ("\\.md\\'" . markdown-mode)
-         ("\\.markdown\\'" . markdown-mode))
-  :init (setq markdown-command "multimarkdown"))
+;(org-babel-load-file (expand-file-name "~/.emacs.d/config/config.org"))
+
+
+(org-babel-load-file (expand-file-name "~/.emacs.d/lisp/init-defaults.org"))
+(org-babel-load-file (expand-file-name "~/.emacs.d/lisp/init-ui.org"))
+(org-babel-load-file (expand-file-name "~/.emacs.d/lisp/init-packages.org"))
+(org-babel-load-file (expand-file-name "~/.emacs.d/lisp/init-keybindings.org"))
