@@ -20,6 +20,3 @@ Thumbs.db
 # Files that might appear on external disks
 .Spotlight-V100
 .Trashes
-
-# Project files
-.emacs.d/lisp/*.el
